@@ -3,13 +3,21 @@ as simple as possible.
 
 To obtain more info visit: https://www.physionet.org/physiotools/wag/wag.htm
 
-The examples cover the next functionalities:
 
-1. Convert signals to *WFDB format*
-2. Convert annotations files in *WFDB format* to *text* file
-3. Using ECGPUWAVE: to detect P-QRS-T on/off waves
+    [TOC]
 
-# 1 Convert signals to WFDB format
+# 1 Convert annotations files in WFDB format to .csv and .ann file
+
+### RUN
+
+```
+python convert_wfdb2csv.py --datadir=/path/to/your/dataset/mitbih/
+```
+
+This script will create a subfolder called ´/csv´ to the datadir and store converted files into it.
+
+
+# 2 Convert signals to WFDB format
 
 ## Creating signal and header files
 If you don't already have PhysioBank-compatible records, an easy way to make them from the data you have is to begin by creating a CSV file containing one sample of each signal per line, as in this example consisting of samples of two ECG signals: 
@@ -50,15 +58,6 @@ To create a PhysioBank-style data collection (repository), given a set of Physio
 More info in: https://physionet.org/tutorials/creating-records.shtml#creating-signal-files-from-physical-signals
 
 
-# 2 Convert annotations files in WFDB format to .csv and .ann file
-
-### RUN
-
-```
-python convert_wfdb2csv.py --datadir=/path/to/your/dataset/mitbih/
-```
-
-This script will create a subfolder called ´/csv´ to the datadir and store converted files into it.
 
 # 3 Using ECGPUWAVE: to detect P-QRS-T on/off waves
 https://physionet.org/physiotools/ecgpuwave/

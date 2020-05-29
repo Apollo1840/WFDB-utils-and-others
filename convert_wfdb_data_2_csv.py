@@ -3,14 +3,15 @@
 from os import listdir, mkdir, system
 from os.path import isfile, isdir, join, exists
 
-dir = 'ediagnostic/wfdb/'#'mitdb/'
-#Create folder
+dir = 'ediagnostic/wfdb/' # 'mitdb/'
+
+# Create folder
 dir_out = dir + 'csv/'
 if not exists(dir_out):
 	mkdir(dir_out)
 
 records = [f for f in listdir(dir) if isfile(join(dir, f)) if(f.find('.dat') != -1)]
-#print records
+# print records
 
 for r in records:
 

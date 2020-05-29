@@ -7,7 +7,7 @@ The examples cover the next functionalities:
 
 1. Convert signals to *WFDB format*
 2. Convert annotations files in *WFDB format* to *text* file
-3. 3 Using ECGPUWAVE: to detect P-QRS-T on/off waves
+3. Using ECGPUWAVE: to detect P-QRS-T on/off waves
 
 # 1 Convert signals to *WFDB format*
 
@@ -36,7 +36,7 @@ Edit the .hea file using any text editor of your choice to insert signal names a
 
 Please use this format to permit indexing software to parse this information reliably. This string may extend over multiple lines if necessary, but begin each such line with '#'.
 
-# RUN
+### RUN
 ```
 python convert_ediagnostic_2_wfdb.py
 ```
@@ -60,7 +60,7 @@ rdann -r record -f 0 -a atr -v > output_dir/name_record_atr.txt
 rdann -r record -f 0 -a qrs -v > output_dir/name_record_qrs.txt
 ```
 
-# RUN
+### RUN
 ```
 python convert_wfdb_data_2_csv.py
 ```
@@ -93,7 +93,7 @@ ecgpuwave -r record  -i input-annotator  -a annotator
 	input annotator extension like *atr*
 
 
-# RUN
+### RUN
 ```
 python ecgpuwave_mitdb.py
 ```

@@ -9,7 +9,7 @@ The examples cover the next functionalities:
 2. Convert annotations files in *WFDB format* to *text* file
 3. Using ECGPUWAVE: to detect P-QRS-T on/off waves
 
-# 1 Convert signals to *WFDB format*
+# 1 Convert signals to WFDB format
 
 ## Creating signal and header files
 If you don't already have PhysioBank-compatible records, an easy way to make them from the data you have is to begin by creating a CSV file containing one sample of each signal per line, as in this example consisting of samples of two ECG signals: 
@@ -50,7 +50,7 @@ To create a PhysioBank-style data collection (repository), given a set of Physio
 More info in: https://physionet.org/tutorials/creating-records.shtml#creating-signal-files-from-physical-signals
 
 
-# 2 Convert annotations files in *WFDB format* to *csv* and **ann** file
+# 2 Convert annotations files in WFDB format to .csv and .ann file
 
 ### RUN
 

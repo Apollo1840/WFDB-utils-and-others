@@ -58,7 +58,7 @@ More info in: https://physionet.org/tutorials/creating-records.shtml#creating-si
 python convert_wfdb2csv.py --datadir=/path/to/your/dataset/mitbih/
 ```
 
-This script will create a subfolder called ´/csv´ and store converted files into it.
+This script will create a subfolder to the datadir which is called ´/csv´ and store converted files into it.
 
 # 3 Using ECGPUWAVE: to detect P-QRS-T on/off waves
 https://physionet.org/physiotools/ecgpuwave/

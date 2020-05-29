@@ -50,22 +50,15 @@ To create a PhysioBank-style data collection (repository), given a set of Physio
 More info in: https://physionet.org/tutorials/creating-records.shtml#creating-signal-files-from-physical-signals
 
 
-# 2 Convert annotations files in *WFDB format* to *text* file
-## rdann
-To convert whatever annotation file from WDFB use *rdann*
-
-Code:
-```
-rdann -r record -f 0 -a atr -v > output_dir/name_record_atr.txt
-rdann -r record -f 0 -a qrs -v > output_dir/name_record_qrs.txt
-```
+# 2 Convert annotations files in *WFDB format* to *csv* and **ann** file
 
 ### RUN
-```
-python convert_wfdb_data_2_csv.py
-```
-This script will read the data from *mitdb/* and will save the data and annotations in .txt format at *mitdb/csv/* 
 
+```
+python convert_wfdb2csv.py --datadir=/path/to/your/dataset/mitbih/
+```
+
+This script will create a subfolder called ´/csv´ and store converted files into it.
 
 # 3 Using ECGPUWAVE: to detect P-QRS-T on/off waves
 https://physionet.org/physiotools/ecgpuwave/
@@ -104,3 +97,12 @@ in text files at *mitdb/qrs/*
 python ecgpuwave_mitdb_atr.py
 ```
 This script apply ecgpuwave on *mitdb/* (using its annotations for QRS peak location) and export the output in text files at *mitdb/qrs/* 
+
+
+# Notes
+
+Code:
+```
+rdann -r record -f 0 -a atr -v > output_dir/name_record_atr.txt
+rdann -r record -f 0 -a qrs -v > output_dir/name_record_qrs.txt
+```
